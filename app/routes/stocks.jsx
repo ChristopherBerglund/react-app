@@ -4,6 +4,7 @@ export default function Stocks() {
     const [stocks, setStocks] = useState([]);
 
     useEffect(() => {
+        
         fetch('https://testapi-6jwh.onrender.com/stock')
             .then((response) => response.json())
             .then((data) => {
