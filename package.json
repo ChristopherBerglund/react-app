@@ -2,15 +2,15 @@
   "name": "my-react-app",
   "private": true,
   "sideEffects": false,
-  "type": "module",    
+  "type": "module",
   "homepage": "https://christopherberglund.github.io/react-app",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "remix-serve ./build/server/index.js",
+    "typecheck": "tsc",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@remix-run/node": "^2.15.0",
